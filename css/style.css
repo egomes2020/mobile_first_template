@@ -97,7 +97,19 @@ body{
     height: 50px;
     border-bottom: 1px solid #606060;
     text-transform: capitalize;
+    font-size: 20px;
+    color: #000;
+}
 
+ .fa-circle:before {
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.fa-trash-alt:before {
+    margin-left: 70px;
+    font-size: 20px;
+    color: #606060;
 }
 
 #footer-cont {
