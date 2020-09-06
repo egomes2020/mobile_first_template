@@ -7,6 +7,7 @@ body{
     outline: none;
     box-sizing: border-box;
     font-family: 'Titillium Web', sans-serif;
+    /* background-image: url("../image/bg-medium.jpg"); */
 }
 
 #container {
@@ -15,7 +16,9 @@ body{
     margin: 10px 10px;
     /* height: 630px; */
     padding: 10px;
-    background-color: rgb(70, 180, 103);
+    /* background-color: transparent; */
+    background-color:rgba(0, 128, 0, 0.767);
+    
 }
 
 #header {
