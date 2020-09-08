@@ -7,7 +7,10 @@ body{
     outline: none;
     box-sizing: border-box;
     font-family: 'Titillium Web', sans-serif;
-    /* background-image: url("../image/bg-medium.jpg"); */
+    background-image: url("../image/bg-medium.jpg");
+    object-fit: cover;
+    background-position: 100%;
+
 }
 /* CONTAINER ////////////////////////////////////////////////////////////////////////*/
 #container {
@@ -16,9 +19,9 @@ body{
     margin: 10px 10px;
     /* height: 630px; */
     padding: 10px;
-    /* background-color: transparent; */
+    background-color: rgba(0, 0, 0, .7);
     /* background-color:rgba(0, 128, 0, 0.767); */
-    background-color: #000;
+    /* background-color: #000; */
     
 }
 
@@ -27,9 +30,13 @@ body{
 #header {
     /* border: 1px dashed #606060; */
     height: 170px;
-    background-color: salmon;
+    /* background-color: salmon; */
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+    background: url("../image/bg4.jpg"); 
+    object-fit: cover;
+    background-position:50% 50%;
+    background-size: 100%;
 }
 
 #header h1 {
@@ -93,7 +100,8 @@ body{
     height: 380px;
     padding: 5px;
     overflow: auto;
-    background-color: skyblue;
+    /* background-color: skyblue; */
+    background-color: #fff;
 }
 
 #list {
@@ -152,9 +160,13 @@ body{
     /* border: 1px dashed #606060; */
     padding: 5px;
     height: 50px;
-    background-color: salmon;
+    /* background-color: salmon; */
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    background: url("../image/bg4.jpg"); 
+    object-fit: cover;
+    background-position:50% 50%;
+    background-size: 100%;
 }
 
 #plus {
@@ -166,7 +178,6 @@ body{
     height: 30px; */
     margin-top: 10px;
     margin-left: 20px;
-    background-color: salmon;
 }
 
 #add-input {
@@ -190,4 +201,6 @@ body{
     font-size: 15pt;
     color: #fff;
     font-weight: 200px;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 10px;
 }
