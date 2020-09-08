@@ -109,6 +109,7 @@ body{
     overflow: auto;
     /* background-color: skyblue; */
     background-color: #fff;
+    margin-bottom: 0px;
 }
 
 #list {
@@ -165,7 +166,7 @@ body{
 /* ADD FOOTER /////////////////////////////////////////////////////////////////////////*/
 #footer-cont {
     /* border: 1px dashed #606060; */
-    padding: 5px;
+    padding: 10px;
     height: 50px;
     /* background-color: salmon; */
     border-bottom-left-radius: 15px;
@@ -184,13 +185,14 @@ body{
     /* width: 100px;
     height: 30px; */
     margin-top: 10px;
-    margin-left: 20px;
+    margin-left: 5px;
+    margin-right: 10px;
 }
 
 #add-input {
-    position: absolute;
-    left: 100px;
-    bottom:108px;
+    /* position: absolute; */
+    /* left: 100px;
+    bottom:108px; */
     height: 35px;
     width: 270px;
     background-color: #fff;
@@ -198,6 +200,7 @@ body{
     font-size: 20px;
     padding-left:10px;
     text-transform: capitalize;
+    margin: 0;
 }
 
 
