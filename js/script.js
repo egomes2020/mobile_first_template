@@ -19,3 +19,30 @@ const options = {
 
 const today = new Date()
 date.innerText = today.toLocaleDateString("br", options);
+
+
+
+//function add item //////////////////////////////////////////
+function addItem(item){
+    let position = "beforebegin"
+    let itemElement = `<li class="list-item"  contenteditable="true">
+                            <i class="far fa-circle" job="complete"></i>
+                            <p> ${item}<i class="fas fa-trash-alt de" job="delete"></i></p><i>
+                        </li>`
+
+    list.insertAdjacentHTML(position, itemElement)
+
+}
+
+// add item with keyup ""enter //////////////////////////////
+document.addEventListener("keyup", function(even){
+    if(event.keyCode == 13){
+        item=input.value
+        //if the input isn´t empty
+        if(item){
+            addItem(item)
+        }
+
+        input.value=""
+    }
+})
