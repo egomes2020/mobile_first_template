@@ -127,11 +127,12 @@ body{
     border-bottom: 1px solid #606060;
     text-transform: capitalize;
     font-size: 20px;
-    color: #000;
+    color: rgb(1,1, 1);
+    
 }
 
-.list-item p {
-    color: #000;
+.text {
+    color: rgba(0, 0, 0, 1);
     margin-top: -15px;
     margin-left: 35px;
 }
@@ -140,13 +141,15 @@ body{
     position: absolute;
     margin-right: 15px;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .fa-check-circle:before {
-    color: green;
+    color: rgb(48, 168, 88);
     position: absolute;
     margin-right: 15px;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .fa-trash-alt:before {
@@ -155,13 +158,18 @@ body{
     top: 27px;    
     font-size: 20px;
     color: #606060;
+    cursor: pointer;
 }
 
 .fa-trash-alt:before .de:hover{
     color: red;
+    
 }
 
-
+.lineThrough{
+    text-decoration: line-through;
+    color : #ccc !important;
+}
 
 /* ADD FOOTER /////////////////////////////////////////////////////////////////////////*/
 #footer-cont {
@@ -177,7 +185,7 @@ body{
     background-size: 100%;
 }
 
-#plus {
+#pencil {
     /* border: 1px dashed #606060; */
     font-size: 25pt;
     font-weight: bold;
@@ -187,6 +195,7 @@ body{
     margin-top: 10px;
     margin-left: 5px;
     margin-right: 10px;
+    
 }
 
 #add-input {
