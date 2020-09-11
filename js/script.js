@@ -3,7 +3,6 @@ const clear = document.querySelector('#clear-btn')
 const date = document.querySelector('#date')
 const list = document.querySelector('#list')
 const input = document.querySelector('#add-input')
-const add_btn = document.getElementById("add_btn");
 
 //classes names///////////////////////////////////////////
 const CHECK = "far fa-check-circle"
@@ -12,28 +11,9 @@ const LINE_THROUGH = "lineThrough"
 
 
 //variables ///////////////////////////////////////////////////
-let LIST, id;
+let LIST = []
+, id = 0;
 
-// GET ITEM FROM LOCAL STORAGE
-let data = localStorage.getItem("TODO")
-
-// CHECK IF DATA IS NOT EMPTY
-if(data){
-    LIST = JSON.parse(data);
-    id = LIST.length
-    loadList(LIST)
-}else{
-    // if data is not empty
-    LIST = []
-    id = 0
-}
-
-// LOAD ITEMS TO USER INTERFACE
- function loadList(array){
-     array.forEach(function(item){
-         addItem(item.name, item.id, item.done, item.trash)
-     })
- }
 
 
 //show date////////////////////////////////////////////////
@@ -63,7 +43,7 @@ function addItem(item, id, done, trash){
     const position = "beforebegin"
     const itemElement = `<li class="list-item">
                             <i class="far ${DONE}" job="complete" id="${id}"></i>
-                            <p class=" text ${LINE}"contenteditable="true" >${item}</p><i class="fas fa-trash-alt de" job="delete" id=" ${id}"></i>
+                            <p class="text ${LINE}" contenteditable="true" >${item}</p><i class="fas fa-trash-alt de" job="delete" id=" ${id}"></i>
                         </li>
                         `;
 
@@ -89,15 +69,13 @@ document.addEventListener("keyup", function(event){
             })
 
 
-            localStorage.setItem("TODO", JSON.stringify(LIST))
-
-
             id++
         }
 
         input.value=""
     }
 })
+
 
 
 
@@ -109,7 +87,6 @@ function completeItem(element){
     element.parentNode.querySelector(".text").classList.toggle(LINE_THROUGH)
 
     LIST[element.id].done = LIST[element.id].done ? false : true
-
 }
 
 
@@ -122,20 +99,16 @@ function removeItem(element){
 
 
 // target the items ///////////////////////////////////////////////
-
-
-
-list.addEventListener("click",function (event) {
-    const element = event.target // returns any item clicked 
-    const elementJob = event.attributes.job.value // complete or delete
+document.addEventListener("click", function(event){
+    const element = event.target
+    const elementJob = element.attributes.job.value;
 
     if (elementJob == "complete"){
-            completeItem(element)
-     } else if (elementJob == "delete") {
-             removeItem(element)
-    }
+        completeItem(element)
+    } else if(elementJob == "delete"){
+        removeItem(element)
+} 
+}) 
 
-    localStorage.setItem("TODO", JSON.stringify(LIST))
 
 
-})
