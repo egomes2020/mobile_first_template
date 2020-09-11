@@ -132,38 +132,56 @@ body{
 }
 
 .text {
-    color: rgba(0, 0, 0, 1);
-    margin-top: -15px;
-    margin-left: 35px;
+    /* border: 2px dashed black; */
+    color:#000 !important;
+    position: absolute;
+    padding:0;
+    margin:0;
+    font-size: 22px;
+    left:65px;
+    top:5px;
+    background-color: #FFF;
+    max-width:285px;
 }
 
  .fa-circle:before {
+     /* border: 2px dashed black; */
     position: absolute;
-    margin-right: 15px;
-    font-size: 20px;
+    font-size: 25px;
+    padding-left:5px;
+    left:15px;
+    top:10px;
+}
+
+.fa-circle:hover {
     cursor: pointer;
 }
 
+
 .fa-check-circle:before {
-    color: rgb(48, 168, 88);
     position: absolute;
-    margin-right: 15px;
-    font-size: 20px;
+    font-size: 25px;
+    padding-left:5px;
+    left:15px;
+    top:10px;
+    border: 2px dashed black;
+}
+
+.fa-check-circle:hover{
     cursor: pointer;
 }
 
 .fa-trash-alt:before {
     position: absolute;
-    right: 20px;
-    top: 27px;    
-    font-size: 20px;
-    color: #606060;
-    cursor: pointer;
+    font-size: 25px;
+    right:15px;
+    top:10px;
+    
 }
 
-.fa-trash-alt:before .de:hover{
-    color: red;
-    
+.fa-trash-alt:hover {
+    color: rgb(245, 16, 16);
+    cursor: pointer;
 }
 
 .lineThrough{
