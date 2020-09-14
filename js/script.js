@@ -4,9 +4,10 @@ const date = document.querySelector('#date')
 const list = document.querySelector('#list')
 const input = document.querySelector('#add-input')
 
+
 //classes names///////////////////////////////////////////
-const CHECK = "far fa-check-circle"
-const UNCHECK = "far fa-circle"
+const CHECK = "fa-check-circle"
+const UNCHECK = "fa-circle"
 const LINE_THROUGH = "lineThrough"
 
 
@@ -42,7 +43,7 @@ function addItem(item, id, done, trash){
 
     const position = "beforebegin"
     const itemElement = `<li class="list-item">
-                            <i class="far ${DONE}" job="complete" id="${id}"></i>
+                            <i class="far ${DONE} " job="complete" id="${id}"></i>
                             <p class="text ${LINE}" contenteditable="true" >${item}</p><i class="fas fa-trash-alt de" job="delete" id=" ${id}"></i>
                         </li>
                         `;
@@ -68,7 +69,6 @@ document.addEventListener("keyup", function(event){
                 trash: false
             })
 
-
             id++
         }
 
@@ -90,6 +90,11 @@ function completeItem(element){
 }
 
 
+
+
+
+
+
 // function remove item ////////////////////////////////////////////////
 function removeItem(element){
     element.parentNode.parentNode.removeChild(element.parentNode)
@@ -101,7 +106,7 @@ function removeItem(element){
 // target the items ///////////////////////////////////////////////
 document.addEventListener("click", function(event){
     const element = event.target
-    const elementJob = element.attributes.job.value;
+    const elementJob = event.target.attributes.job.value
 
     if (elementJob == "complete"){
         completeItem(element)
@@ -109,6 +114,9 @@ document.addEventListener("click", function(event){
         removeItem(element)
 } 
 }) 
+
+
+
 
 
 
