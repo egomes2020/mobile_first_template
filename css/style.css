@@ -27,7 +27,7 @@ body{
     background-color: rgba(0, 0, 0, .7);
     /* background-color:rgba(0, 128, 0, 0.767); */
     /* background-color: #000; */
-    
+    backdrop-filter: blur(10px);
 }
 
 
@@ -54,6 +54,7 @@ body{
     font-size: 30px;
     color: #fff;
     background-color: rgba(0, 0, 0, .3);
+    backdrop-filter: blur(10px);
 }
 
 .fas .fa-shopping-cart{
@@ -67,7 +68,7 @@ body{
     height: 30px;
     position: absolute;
     right:35px;
-    top: 30px;
+    top: 20px;
 }
 #clear-btn i{
     font-size: 30px;
@@ -97,6 +98,7 @@ body{
     background-color: rgba(0, 0, 0, .3);
     text-transform: uppercase;
     font-weight: bold;
+    backdrop-filter: blur(10px);
 }
 
 
