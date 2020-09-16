@@ -11,9 +11,43 @@ const UNCHECK = "fa-circle"
 const LINE_THROUGH = "lineThrough"
 
 
-//variables ///////////////////////////////////////////////////
-let LIST = []
-, id = 0;
+//variables local storage ///////////////////////////////////////////////////
+let LIST = [], id = 0
+
+
+
+ //add item to localstorage
+ 
+
+
+//get item from localstorage
+// let data = localStorage.getItem("TODO")
+
+
+//check if data is not empty
+// if(data){
+//     LIST = JSON.parse(data)
+//     id = LIST.length
+//     loadList(LIST)
+// }else{
+//     LIST = []
+//     id = 0
+// }
+
+// load itens to interface
+// function loadList (array) {
+//     array.forEach(function(item){
+//         addItem(item.name, item.id, item.done, item.trash)
+//     })
+// }
+
+
+
+//clear localstorage
+clear.addEventListener("click", function(){
+    localStorage.clear()
+    location.reload()
+})
 
 
 
@@ -69,6 +103,10 @@ document.addEventListener("keyup", function(event){
                 trash: false
             })
 
+
+            //add item to localstorage
+            localStorage.setItem("COMPRAS", JSON.stringify(LIST))
+
             id++
         }
 
@@ -93,14 +131,14 @@ function completeItem(element){
 
 
 
-
-
 // function remove item ////////////////////////////////////////////////
 function removeItem(element){
     element.parentNode.parentNode.removeChild(element.parentNode)
 
     LIST[element.id].trash = true
 }
+
+
 
 
 // target the items ///////////////////////////////////////////////
@@ -113,6 +151,10 @@ document.addEventListener("click", function(event){
     } else if(elementJob == "delete"){
         removeItem(element)
 } 
+
+    //add item to localstorage
+    localStorage.setItem("COMPRAS", JSON.stringify(LIST))
+
 }) 
 
 
