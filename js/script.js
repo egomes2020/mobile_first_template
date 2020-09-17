@@ -1,6 +1,6 @@
 // select elements////////////////////////////////////////
 const clear = document.querySelector('#clear-btn')
-const date = document.querySelector('#date')
+const date = document.querySelector('#pdate')
 const list = document.querySelector('#list')
 const input = document.querySelector('#add-input')
 
@@ -65,15 +65,15 @@ date.innerText = today.toLocaleDateString("br", options);
 //function add item //////////////////////////////////////////
 function addItem(item, id, done, trash){
 
-    if(trash) {return;}
+    if(trash) {return}
 
     const DONE = done ? CHECK : UNCHECK;
     const LINE = done ? LINE_THROUGH : "";
 
-    const position = "beforebegin"
+    const position = "afterbegin"
     const itemElement = `<li class="list-item">
-                            <i class="far ${DONE} " job="complete" id="${id}"></i>
-                            <p class="text ${LINE}" contenteditable="true" >${item}</p><i class="fas fa-trash-alt de" job="delete" id=" ${id}"></i>
+                            <i class="far ${DONE} " job ="complete" id="${id}"></i>
+                            <p class="text ${LINE}" contenteditable="true" >${item}</p><i class="fas fa-trash-alt de" job ="delete" id=" ${id}"></i>
                         </li>
                         `;
 
@@ -131,6 +131,7 @@ function removeItem(element){
     element.parentNode.parentNode.removeChild(element.parentNode)
 
     LIST[element.id].trash = true
+
 }
 
 
@@ -139,7 +140,7 @@ function removeItem(element){
 // target the items ///////////////////////////////////////////////
 document.addEventListener("click", function(event){
     const element = event.target
-    const elementJob = event.target.attributes.job.value
+    const elementJob = element.attributes.job.value
 
     if (elementJob == "complete"){
         completeItem(element)
