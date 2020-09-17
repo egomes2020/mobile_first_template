@@ -363,6 +363,12 @@ body{
         padding: 5px;
         height: 30px;
         margin-top:90px;
+      
+    }
+
+
+    #clear-btn i{
+        font-size: 35px;
     }
 
     #content {

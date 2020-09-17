@@ -167,8 +167,8 @@ window.addEventListener("load", function (){
 const share = document.querySelector("#shareIcon")
 share.addEventListener("click", () =>{
     navigator.share({
-        title:"teste",
-        text: "teste etsetetet etetete",
+        title:"Lista de Compras",
+        text: "by Edgar Gomes",
         url: ' https://egomes2020.github.io/mobile_first_template/'
     })
 })
