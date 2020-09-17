@@ -12,34 +12,29 @@ const LINE_THROUGH = "lineThrough"
 
 
 //variables local storage ///////////////////////////////////////////////////
-let LIST = [], id = 0
+// let LIST = JSON.parse(localStorage.getItem('COMPRAS')) || [], id= 0
 
-
+let LIST, id
 
  //add item to localstorage
- 
 
+function saveStorage(){
+    localStorage.setItem("COMPRAS", JSON.stringify(LIST))
+}
 
 //get item from localstorage
-// let data = localStorage.getItem("TODO")
+let data = localStorage.getItem('COMPRAS')
 
+LIST = JSON.parse(data) || [], id=0
+loadList()
 
-//check if data is not empty
-// if(data){
-//     LIST = JSON.parse(data)
-//     id = LIST.length
-//     loadList(LIST)
-// }else{
-//     LIST = []
-//     id = 0
-// }
 
 // load itens to interface
-// function loadList (array) {
-//     array.forEach(function(item){
-//         addItem(item.name, item.id, item.done, item.trash)
-//     })
-// }
+function loadList(){
+    LIST.forEach(function(item){
+        addItem(item.name, item.id, item.done, item.trash)
+    })
+}
 
 
 
@@ -105,7 +100,7 @@ document.addEventListener("keyup", function(event){
 
 
             //add item to localstorage
-            localStorage.setItem("COMPRAS", JSON.stringify(LIST))
+            saveStorage()
 
             id++
         }
@@ -153,8 +148,7 @@ document.addEventListener("click", function(event){
 } 
 
     //add item to localstorage
-    localStorage.setItem("COMPRAS", JSON.stringify(LIST))
-
+    saveStorage()
 }) 
 
 
