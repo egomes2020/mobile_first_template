@@ -155,8 +155,20 @@ document.addEventListener("click", function(event){
 
 
 
-//function loader
+//function loader /////////////////////////////////////////////////////////////
 window.addEventListener("load", function (){
     const loader = document.querySelector(".loader")
     loader.className += " hidden"
+})
+
+
+
+//function share ///////////////////////////////////////////////////////////
+const share = document.querySelector("#shareIcon")
+share.addEventListener("click", () =>{
+    navigator.share({
+        title:"teste",
+        text: "teste etsetetet etetete",
+        url: ' https://egomes2020.github.io/mobile_first_template/'
+    })
 })
