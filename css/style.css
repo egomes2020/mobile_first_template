@@ -126,7 +126,7 @@ body{
 }
 #clear-btn i{
     font-size: 30px;
-    color: #FFF;
+    color: rgb(252, 255, 57);
 }
 #clear-btn i:hover{
     cursor: pointer;
@@ -339,6 +339,7 @@ body{
     #container {
        width: 50%;
        margin:20px auto;
+       background: blue !importante;
     }
 
     #header {
